@@ -1,3 +1,5 @@
+"use client";
+
 export default function MovieCard({ movie }: { movie: any }) {
   return (
     <div className="group relative rounded-lg overflow-hidden bg-white  hover:shadow-2xl ">
