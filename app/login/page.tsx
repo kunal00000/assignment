@@ -14,30 +14,42 @@ export default function Login() {
 
   const handleSignUp = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    await supabase.auth.signUp({
+    const { data, error } = await supabase.auth.signUp({
       email,
       password,
       options: {
         emailRedirectTo: `${location.origin}/auth/callback`
       }
     });
-    setView("check-email");
+
+    if (data.user) {
+      setView("check-email");
+    }
+    if (error) {
+      alert(error.message + ". Try again");
+    }
   };
 
   const handleSignIn = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    await supabase.auth.signInWithPassword({
+    const { data, error } = await supabase.auth.signInWithPassword({
       email,
       password
     });
-    router.push("/");
-    router.refresh();
+
+    if (data.user) {
+      router.push("/movie");
+      router.refresh();
+    }
+    if (error) {
+      alert(error.message + ". Try again");
+    }
   };
 
   return (
     <div className="flex-1 flex flex-col w-full px-8 sm:max-w-md justify-center gap-2">
       <Link
-        href="/"
+        href="/movie"
         className="absolute left-8 top-8 py-2 px-4 rounded-md no-underline text-foreground bg-btn-background hover:bg-btn-background-hover flex items-center group text-sm"
       >
         <svg
