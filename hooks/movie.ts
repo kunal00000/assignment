@@ -15,7 +15,6 @@ async function fetchMovie() {
     });
     const data = await response.json();
     const movies = data.results;
-    console.log(movies);
     return movies;
   } catch (e) {
     console.log(e);
