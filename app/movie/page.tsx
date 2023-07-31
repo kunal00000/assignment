@@ -38,7 +38,7 @@ export default function Movie() {
     checkUser();
   }, []);
 
-  const { data: movies, isLoading } = useMovie();
+  const { data: movies, isLoading } = useMovie({ user });
 
   if (isLoading) {
     return <div>Loading...</div>;

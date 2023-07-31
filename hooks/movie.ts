@@ -1,7 +1,12 @@
+import { User } from "@supabase/auth-helpers-nextjs";
 import { useQuery } from "react-query";
 
-export default function useMovie() {
-  return useQuery("movies", fetchMovie);
+export default function useMovie({ user }: { user: User | null }) {
+  return useQuery({
+    queryKey: "movies",
+    queryFn: fetchMovie,
+    enabled: Boolean(user)
+  });
 }
 
 async function fetchMovie() {
