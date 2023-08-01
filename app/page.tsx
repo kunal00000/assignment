@@ -16,7 +16,7 @@ export const metadata = {
       {
         url: "https://jetprotocol.io/assets/images/Jetwhitelogo.png",
         width: 800,
-        height: 600,
+        height: 100,
         alt: "Jet Protocol"
       }
     ]
