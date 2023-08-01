@@ -14,7 +14,7 @@ export const metadata = {
       "Jet Protocol is a decentralized lending and borrowing protocol built on Solana. It is efficient, reliable and trusted by users because of its transparency.",
     images: [
       {
-        url: "https://assignment-kunal00000.vercel.app",
+        url: "https://jetprotocol.io/assets/images/Jetwhitelogo.png",
         width: 800,
         height: 600,
         alt: "Jet Protocol"
