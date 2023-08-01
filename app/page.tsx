@@ -2,6 +2,27 @@ import Link from "next/link";
 import { Carousel } from "../components/Carousel";
 import { Icon } from "../components/JetProtocolIcon";
 
+export const metadata = {
+  title: "Jet Protocol",
+  description:
+    "Jet Protocol is a decentralized lending and borrowing protocol built on Solana. It is efficient, reliable and trusted by users because of its transparency.",
+  openGraph: {
+    type: "website",
+    url: "https://assignment-kunal00000.vercel.app",
+    title: "Jet Protocol",
+    description:
+      "Jet Protocol is a decentralized lending and borrowing protocol built on Solana. It is efficient, reliable and trusted by users because of its transparency.",
+    images: [
+      {
+        url: "https://assignment-kunal00000.vercel.app",
+        width: 800,
+        height: 600,
+        alt: "Jet Protocol"
+      }
+    ]
+  }
+};
+
 export default function Index() {
   return (
     <>
