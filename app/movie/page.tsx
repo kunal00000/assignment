@@ -86,7 +86,7 @@ export default function Movie() {
         </div>
       ) : (
         <div className="w-[100vw] text-center m-lg ">
-          You are logged in. Please login to continue
+          You are not logged in. Please login to continue
         </div>
       )}
     </div>
