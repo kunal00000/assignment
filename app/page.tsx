@@ -34,16 +34,16 @@ export default function Index() {
             <span className="font-extralight">protocol</span>
           </div>
 
-          <div className="flex flex-row gap-10 text-white font-mono">
+          <div className="flex flex-row gap-10 xs:hidden sm:hidden md:inline-flex cursor-pointer text-white font-mono">
             <p className="hover:underline underline-offset-8">products</p>
             <p className="hover:underline underline-offset-8">dao</p>
             <p className="hover:underline underline-offset-8">build</p>
             <p className="hover:underline underline-offset-8">docs</p>
           </div>
 
-          <div className="w-[9%] rounded-full h-10 p-[0.07rem] bg-gradient-to-b from-white to-gray-600 font-mono">
+          <div className="rounded-full h-10 p-[0.07rem] bg-gradient-to-b from-white to-gray-600 font-mono">
             <Link href="/login">
-              <button className="w-full h-full hover:underline underline-offset-4 rounded-full bg-teal-500 shadow-[inset_0px_-1px_3px_rgba(0,0,0,0.6),inset_0px_2px_3px_rgba(256,256,256,0.6)]">
+              <button className="w-full h-full px-[1vw] hover:underline underline-offset-4 rounded-full bg-teal-500 shadow-[inset_0px_-1px_3px_rgba(0,0,0,0.6),inset_0px_2px_3px_rgba(256,256,256,0.6)]">
                 launch app
               </button>
             </Link>
@@ -53,16 +53,20 @@ export default function Index() {
         <div className="animate-in flex flex-col gap-y-8 opacity-0 px-3 py-16 lg:py-24">
           <div className="flex flex-col items-center">
             <div className="w-[50%] rounded-b-full shadow-[0px_30px_200px_100px] shadow-teal-600" />
-            <div className="text-teal-300 mt-8 text-sm">JET PROTOCOL</div>
-            <div className="font-sans lg:text-6xl mx-auto text-white text-center">
+            <div className="text-teal-300 mt-8 xs:text-xs lg:text-sm">
+              JET PROTOCOL
+            </div>
+            <div className="font-sans xs:text-4xl lg:text-6xl mx-auto text-white text-center">
               <span className="">the next generation of</span>
               <br />
-              <i className="font-serif text-5xl">defi governance</i>
+              <i className="font-serif xs:text-3xl lg:text-5xl">
+                defi governance
+              </i>
             </div>
           </div>
 
           <div className="mx-auto text-gray-400 text-center">
-            <p className="text-lg">
+            <p className="xs:text-sm lg:text-lg">
               experience open source, transparent and efficient borrowing and{" "}
               <br />
               lending on solana.
